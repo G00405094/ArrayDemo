@@ -1,44 +1,46 @@
 package ie.atu;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ArrayDemo {
     public static void main(String[] args) {
-        int[] anArray;
+        ArrayList<Integer> myList = new ArrayList<>();
 
-        anArray = new int[10];
-
-        anArray[0] = 100;
-        anArray[1] = 200;
-        anArray[2] = 300;
-        anArray[3] = 400;
-        anArray[4] = 500;
-        anArray[5] = 600;
-        anArray[6] = 700;
-        anArray[7] = 800;
-        anArray[8] = 900;
-        anArray[9] = 1000;
-
+        myList.add(100);
+        myList.add(200);
+        myList.add(300);
+        myList.add(400);
+        myList.add(500);
+        myList.add(600);
+        myList.add(700);
+        myList.add(800);
+        myList.add(900);
+        myList.add(1000);
+        loop(myList);
 
 
-        System.out.println("Element at index 0: " + anArray[0]);
-        System.out.println("Element at index 1: " + anArray[1]);
-        System.out.println("Element at index 2: " + anArray[2]);
-        System.out.println("Element at index 3: " + anArray[3]);
-        System.out.println("Element at index 4: " + anArray[4]);
-        System.out.println("Element at index 5: " + anArray[5]);
-        System.out.println("Element at index 6: " + anArray[6]);
-        System.out.println("Element at index 7: " + anArray[7]);
-        System.out.println("Element at index 8: " + anArray[8]);
-        System.out.println("Element at index 9: " + anArray[9]);
+
 
         Scanner myScan = new Scanner(System.in);
 
         try {
             System.out.println("Please enter a new number");
-            anArray[10] = myScan.nextInt();
+            myList.set(10, myScan.nextInt());
         } catch (Exception e) {
             System.out.println("Error, You went outside your limit.");
+        }
+
+
+    }
+
+    public static void loop(ArrayList<Integer> someArrayList)
+    {
+        int indexValue = 0;
+        for (int value: someArrayList)
+        {
+            System.out.println("Element at index "+ indexValue+ " : "+ value);
+            indexValue++;
         }
     }
 }
