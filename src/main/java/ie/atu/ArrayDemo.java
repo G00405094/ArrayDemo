@@ -34,7 +34,11 @@ public class ArrayDemo {
 
         Scanner myScan = new Scanner(System.in);
 
-        System.out.println("Please enter a new number");
-        anArray[10] = myScan.nextInt();
+        try {
+            System.out.println("Please enter a new number");
+            anArray[10] = myScan.nextInt();
+        } catch (Exception e) {
+            System.out.println("Error, You went outside your limit.");
+        }
     }
 }
