@@ -1,5 +1,7 @@
 package ie.atu;
 
+import java.util.Scanner;
+
 public class ArrayDemo {
     public static void main(String[] args) {
         int[] anArray;
@@ -29,5 +31,10 @@ public class ArrayDemo {
         System.out.println("Element at index 7: " + anArray[7]);
         System.out.println("Element at index 8: " + anArray[8]);
         System.out.println("Element at index 9: " + anArray[9]);
+
+        Scanner myScan = new Scanner(System.in);
+
+        System.out.println("Please enter a new number");
+        anArray[10] = myScan.nextInt();
     }
 }
